@@ -1,5 +1,5 @@
-pipeline { 
-    environment { 
+pipeline {
+        environment { 
         registry = "brontvain/go-httpserver" 
         registryCredential = 'dockerhub-pat' 
         dockerImage = '' 
@@ -33,5 +33,6 @@ pipeline {
                 sh "docker rmi $registry:$BUILD_NUMBER" 
             }
         } 
+    cleanWs()
     }
 }
