@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh "printenv"
             }
+        }    
         stage('Cloning Git') { 
             steps { 
                 git 'https://github.com/brontvain/docker-go-httpserver' 
