@@ -15,6 +15,7 @@ pipeline {
         stage('Cloning Git') { 
             steps { 
                 git 'https://github.com/brontvain/docker-go-httpserver' 
+                cleanWs()
             }
         } 
         stage('Building Docker Image') { 
@@ -38,6 +39,5 @@ pipeline {
                 sh "docker rmi $registry:$BUILD_NUMBER" 
             }
         } 
-    cleanWs()
     }
 }
