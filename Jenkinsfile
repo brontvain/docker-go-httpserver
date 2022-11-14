@@ -15,7 +15,7 @@ pipeline {
         stage('Cloning Git') { 
             steps {
                 cleanWs()
-                git 'https://github.com/brontvain/docker-go-httpserver' 
+                git branch: 'main', url: 'https://github.com/brontvain/docker-go-httpserver' 
 
             }
         } 
