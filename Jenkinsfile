@@ -13,9 +13,10 @@ pipeline {
             }
         }    
         stage('Cloning Git') { 
-            steps { 
-                git 'https://github.com/brontvain/docker-go-httpserver' 
+            steps {
                 cleanWs()
+                git 'https://github.com/brontvain/docker-go-httpserver' 
+
             }
         } 
         stage('Building Docker Image') { 
